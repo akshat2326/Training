@@ -1,0 +1,15 @@
+<p style="text-align:center">Employee Details</p>
+<table style= "align : center;">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Department</th>
+    </tr>
+    <tr *ngFor="let f of data">
+      <td>{{f.employeeId}}</td>
+      <td>{{f.employeeName}}</td>
+      <td>{{f.employeeSalary}}</td>
+      <td>{{f.employeeDepartment}}</td>
+    </tr>
+  </table>
