@@ -1,0 +1,33 @@
+<mat-toolbar>Enter Your Data</mat-toolbar>
+<mat-card>
+<form [formGroup]="assignform" (ngSubmit)="onsubmit()">
+
+  <mat-form-field>
+    <input  matInput type="text" placeholder="UserName" formControlName="name" required>
+     <mat-error *ngIf = "assignform.controls.name.errors?.required">UserName is required</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input  matInput type="number" placeholder="Mobile" formControlName="mobile" required>
+       <mat-error *ngIf = "assignform.controls.mobile.errors?.maxlength">Mobile Length not more than 10 </mat-error>
+      </mat-form-field>
+      <br>
+     <mat-form-field>
+  <input  matInput type="email" placeholder="Email" formControlName="email" required>
+   <mat-error *ngIf = "assignform.controls.email.errors?.email">Email is incorrect</mat-error>
+  </mat-form-field>
+  <br>
+
+
+
+    <mat-form-field>
+    <input matInput type="password" placeholder="Password" formControlName="password" required>
+    <mat-error *ngIf="assignform.controls.password.errors?.required">Password is required</mat-error>
+    <mat-error *ngIf="assignform.controls.password.errors?.pattern">Password is incorrect</mat-error>
+
+  </mat-form-field>
+    <br>
+    <button type="submit" mat-raised-button color="primary">Click</button>
+
+</form>
+</mat-card>

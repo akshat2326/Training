@@ -27,8 +27,8 @@ export class FormComponent implements OnInit {
    this.data.emit(rows);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
 
 
 }
